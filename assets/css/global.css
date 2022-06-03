@@ -397,6 +397,8 @@ header {
   opacity: 0;
   background-color: red;
   position: absolute;
+  -webkit-transform: translateY(-40%);
+          transform: translateY(-40%);
 }
 
 .video:hover {
