@@ -9,12 +9,26 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
         $(document).ready(function() {
-        $(".vid-preview").on("mouseover", function(event) {
-            this.play();
-        }).on('mouseout', function(event) {
-            $("video").get(0).currentTime = 6;
-            this.pause();
-        });
+            
+            // $(".vid-preview").hover(function(){
+            //     var startTime = $(this).attr("start")
+            //     $(this).get(0).currentTime = startTime;
+            //     this.play();
+            // },
+            // function(){
+            //     var startTime = $(this).attr("start")
+            //     $(this).get(0).currentTime = startTime;
+            //     this.pause();
+            // }); 
+            $(".vid-preview").on("mouseover", function(event) {
+                var startTime = $(this).attr("start")
+                $(this).get(0).currentTime = startTime;
+                this.play();
+            }).on('mouseout', function(event) {
+                var startTime = $(this).attr("start")
+                $(this).get(0).currentTime = startTime;
+                this.pause();
+            });
         })
     </script>
 </head>
@@ -25,34 +39,58 @@
         </div>
     </header>
 
+    <div class="topnav">
+        <a href="#">Movies</a>
+        <a href="#">TV</a>
+        <a href="#">Login</a>
+        <a href="#">Register</a>
+    </div>
+
     <div class="thumbnail-grid">
         <div class="project-thumbnail">
-            <img src="https://img.youtube.com/vi/MKipCaOOkVI/maxresdefault.jpg" alt="fearless">
-            <div class="video">
-                <video playsinline="" muted="" loop="" class="vid-preview" src="assets\videos\fearless.mp4#t=6,20">
-                </video>
+            <img src="https://img.youtube.com/vi/MKipCaOOkVI/maxresdefault.jpg">
+            
+            <div class="secondtier">
+                <!-- <div class="fade"></div> -->
+                <div class="details">
+                    <h2>Fearless - The Pixies</h2>
+                </div>
+                <div class="video square">
+                    <video playsinline muted loop class="vid-preview" start="6" src="assets\videos\fearless.mp4">
+                    </video>
+                </div>
+            </div>
+            
+        </div>
+        <div class="project-thumbnail">
+            <img src="https://img.youtube.com/vi/WB2W7-cH8KY/maxresdefault.jpg">
+            <div class="secondtier">
+                <div class="details">
+                    <h2>Love Dive - The Pixies</h2>
+                </div>
+                <div class="video square">
+                    <video playsinline muted loop class="vid-preview" start="3" src="assets\videos\lovedive.mp4">
+                    </video>
+                </div>
             </div>
         </div>
         <div class="project-thumbnail">
-            <img src="https://img.youtube.com/vi/WB2W7-cH8KY/maxresdefault.jpg" alt="fearless">
+            <img src="https://img.youtube.com/vi/1pOKsWSISdg/maxresdefault.jpg">
         </div>
         <div class="project-thumbnail">
-            <img src="https://img.youtube.com/vi/1pOKsWSISdg/maxresdefault.jpg" alt="fearless">
+            <img src="https://img.youtube.com/vi/EIKoPpnRER0/maxresdefault.jpg">
         </div>
         <div class="project-thumbnail">
-            <img src="https://img.youtube.com/vi/EIKoPpnRER0/maxresdefault.jpg" alt="fearless">
+            <img src="https://img.youtube.com/vi/4RcqhxdWBHI/maxresdefault.jpg">
         </div>
         <div class="project-thumbnail">
-            <img src="https://img.youtube.com/vi/4RcqhxdWBHI/maxresdefault.jpg" alt="fearless">
-        </div>
-        <div class="project-thumbnail">
-            <img src="https://img.youtube.com/vi/SfJDsdf-Clw/maxresdefault.jpg" alt="fearless">
+            <img src="https://img.youtube.com/vi/SfJDsdf-Clw/maxresdefault.jpg">
         </div>
         <div class="project-thumbnail">   
-            <img src="https://img.youtube.com/vi/DiiqETzZuXM/maxresdefault.jpg" alt="fearless">
+            <img src="https://img.youtube.com/vi/DiiqETzZuXM/maxresdefault.jpg">
         </div>
         <div class="project-thumbnail">
-            <img src="https://img.youtube.com/vi/6-DGRHa9r7M/maxresdefault.jpg" alt="fearless">
+            <img src="https://img.youtube.com/vi/6-DGRHa9r7M/maxresdefault.jpg">
         </div>
     </div>
 </body>
